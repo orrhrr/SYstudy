@@ -21,3 +21,23 @@ function sum(a, b) {
     return a + b;
 }
 
+
+
+
+let num1 = 1;
+let num2 = 2;
+const str1 = 'hello';
+const str2 = 'bye';
+const arr1 = ['~~', '!!']
+
+function func1() {
+  let num3 = 3
+  return num1 + num2 + num3
+}
+
+function func2() {
+  const funcStr = str1 + str2
+  for(let i = 0; i < 4; ++i) {
+    funcStr = arr[i]
+  }
+}

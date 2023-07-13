@@ -46,3 +46,7 @@ var a, b, c;
 a = b = c = 0;
 
 console.log(a, b, c);  // 0 0 0
+
+
+// 특정값을 return 하는 함수와 실행만 하는 함수(Ex. console.log) 모두 반환 값만 다른 표현식이다. 
+// 함수 자체가 input - output의 특성을 갖기 때문.
