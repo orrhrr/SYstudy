@@ -1,3 +1,4 @@
+//문자 타입으로 암묵적 변환
 // 자바스크립트 엔진은 개발자의 의도와는 상관없이 코드의 문맥을 고려해 암묵적으로 타입을 강제 변환 할 떄가 있다.
 
 // 피연산자가 모두 문자열 타입이어야 하는 문맥
@@ -46,3 +47,39 @@ Math + '' // '[object Math]'
 [10, 20] + '' // '10, 20'
 (function(){}) + '' // 'function(){}'
 Array + '' // 'function Array() {[native code]}'
+
+
+
+
+
+// 문자열 타입으로 명시적 변환
+
+// 1. String 생성자 함수를 new 연산자 없이 호출하는 방법
+// 숫자 -> 문자열
+String(1); // "1"
+String(NaN); // "NaN"
+String(Infinity); // "Infinity"
+// 불리언 -> 문자열
+String(true); // "true"
+String(false); //"false"
+
+
+// 2. object.prototype.toString 메서드를 사용하는 방법
+// 숫자 -> 문자열
+(1).toString(); // "1"
+(NaN).toString(); // "NaN"
+(Infinity).toString(); // "Infinity"
+// 불리언 -> 문자열
+(true).toString(); // "true"
+(false).toString(); // "false"
+
+
+// 3. 문자열 연결 연산자를 이용하는 방법
+// 숫자 -> 문자열
+1 + '';  // "1"
+NaN + ''; // "NaN"
+Infinity + ''; // "Infinity"
+// 불리언 -> 문자열
+true + ''; // "true"
+false + ''; // "false"
+
