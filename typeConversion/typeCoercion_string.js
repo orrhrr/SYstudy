@@ -82,4 +82,3 @@ Infinity + ''; // "Infinity"
 // 불리언 -> 문자열
 true + ''; // "true"
 false + ''; // "false"
-
