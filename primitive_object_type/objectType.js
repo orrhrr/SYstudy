@@ -33,9 +33,23 @@ console.log(person); // {name: 'kim', address: 'seoul'}
 const o = {x: {y: 1} };
 
 //얕은 복사 :한 단계 까지만 복사
-const c1 = {...o}; 
+const c1 = {...o}; // 스프레드 문법. c1 변수에 o 객체를 복사함.
 console.log( c1 === o ); // false
 console.log(c1.x === o.x); // true
+
+// ------------------------------------------ 다른 예제
+const obj = { 
+    string: 'hi'
+}; // ex. A라는 메모리 공간에 저장됨
+
+const obj2 = {
+    string: 'hi'
+}; // ex. B라는 메모리 공간에 저장됨
+
+console.log( obj === obj2 ); // false ( A !== B /두 변수에 저장된 것은 객체를 참조하는 주소값인데, 그 주소값은 서로 다름)
+console.log( obj.string === obj2.string); // true (({string: 'hi'} === {string: 'hi}) /객체 값은 같음)
+// ------------------------------------------ 
+
 
 // 깊은 복사 : 객체에 중첩되어 있는 객체까지 모두 복사
 // lodash의 cloneDeep을 사용한 깊은 복사
@@ -56,14 +70,45 @@ const v = 1;
 
 // 깊은 복사라고 부르기도 한다.
 const copy1 = v;
-console.log(copy1 === v); // true
+console.log(copy1 === v); // true (원시값 복사)
 
 const g = {x : 1};
 
 // 얕은 복사라도 부르기도 한다.
 const copy2 = g;
-console.log(copy2 === g); // true
+console.log(copy2 === g); // true (참조값 복사)
 
 
 
+// 2. 참조에 의한 전달
+// 객체를 가리키는 변수를 다른 변수에 할당하면 원본의 *참조 값*이 복사되어 전달된다.
+
+let person = {
+    name: 'Lee'
+};
+// 참조 값을 복사(얕은 복사)
+let copy = person;
+
+/* 
+
+- 특정 메모리 공간에 객체가 할당된다.
+- person 변수에는 객체가 할당된 *메모리 공간의 주소값*이 할당된다. (객체 자체가 담기는 것이 아님!)
+- copy 변수에 person 변수를 할당하게 되면 copy 변수에도 객체가 할당된 메모리 공간의 주소값이 할당된다.
+- 즉 두 변수는 하나의 객체에 접근할 수 있고 공유할 수 있다.
+- 따라서 원본(person) 또는 사본(copy) 중 어느 한쪽에서 객체를 수정하면 서로 영향을 주고 받는다.
+*/
+
+copy.name = 'kim'; // copy를 통해 객체 변경 (프로퍼티 값 수정)
+person.address = 'Seoul'; //person을 통해 객체 변경 (프로퍼티 추가)
+
+// copy와 person은 동일한 객체를 가리킨다.
+// 따라서 어느 한쪽에서 객체를 변경하면 서로 영향을 주고 받는다.
+console.log(person); // {name: 'kim', address: 'Seoul'}
+console.log(copy); // {name: 'kim', address: 'Seoul'}
+
+
+// 값에 의한 전달과 참조에 의한 전달은 식별자가 기억하는 메모리 공간에 저장되어 있는 값을 복사해서 전달한다는 면에서 동일하다.
+// 엄밀히 말하자면 자바스크립트에서는 "참조에 의한 전달"은 존재하지 않고 "값에 의한 전달"만 존재한다고 볼 수 있다.
+// 원시 값 복사 시: 같은 원시값 복사 
+// 참조 값 복사 시: 메모리주소값 복사
 
