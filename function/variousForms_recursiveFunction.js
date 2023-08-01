@@ -49,7 +49,7 @@ console.log(factorial(5)); // 5! = 5 * 4 * 3 * 2 * 1 = 120
 
 
 // for문으로 구현
-function factorial(n) {
+function factorialFor(n) {
 
     let result = 1;
 
@@ -59,10 +59,10 @@ function factorial(n) {
 
     return result;
 }
-console.log(factorial(5));
+console.log(factorialFor(5));
 
 // while문으로 구현
-function factorial(n) {
+function factorialWhile(n) {
     let result = 1;
     let i = n;
     while(i >= 1) {
@@ -71,4 +71,14 @@ function factorial(n) {
     } 
     return result;
 }
-console.log(factorial(5));
+console.log(factorialWhile(5));
+
+
+// 반복문을 재귀함수로
+
+function factorial2(n) {
+    if(n <= 1) return 1;
+    return n * factorial2(n - 1);
+}
+
+console.log(factorial2(5));
