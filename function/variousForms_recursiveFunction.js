@@ -77,8 +77,7 @@ console.log(factorialWhile(5));
 // 반복문을 재귀함수로
 
 function factorial2(n) {
-    if(n <= 1) return 1;
-    return n * factorial2(n - 1);
+    return (n <= 1 ?  1 : n * factorial2(n -1));
 }
 
 console.log(factorial2(5));
