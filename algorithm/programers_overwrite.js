@@ -38,3 +38,49 @@ function solution(my_string, overwrite_string, s) {
 } 
 
 solution("He11oWor1d", "lloWorl", 2);
+
+
+
+// 기타 for문 사용 답안 
+// 1.
+function solution(my_string, overwrite_string, s) {
+    let answer = '';
+    for (let i = 0; i < my_string.length; i ++) {
+        if (i < s || i >= s + overwrite_string.length) { 
+            answer += my_string[i]
+        } else {
+            answer += overwrite_string[i-s]
+        }
+    }
+    return answer;
+}
+solution("He11oWor1d", "lloWorl", 2);
+
+// 2.
+function solution(my_string, overwrite_string, s) {
+     let result = "";
+  for (let i = 0; i < my_string.length; i++) {
+    if (i >= s && i < s + overwrite_string.length) {
+      result += overwrite_string[i - s];
+    } else {
+      result += my_string[i];
+    }
+  }
+  return result;
+}
+
+solution("He11oWor1d", "lloWorl", 2);
+
+
+// 3. 정현쌤 코드
+function solution(my_string, overwrite_string, s) {
+    let start = "";
+    let end = "";
+    for (let i = 0; i < my_string.length; ++i) {
+      if (i < s) start += my_string[i]; // 현재 인덱스(i)가 s보다 작을때 start변수에 my_string[i]값을 할당
+        // 현재 인덱스(i)가 s와 같거나 my_string.length보다 작을 때는 아무 일도 일어나지 않음
+      if (i > s && overwrite_string.length + s < i + 1) end += my_string[i];
+    }
+  
+    return `${start}${overwrite_string}${end}`;
+  }
