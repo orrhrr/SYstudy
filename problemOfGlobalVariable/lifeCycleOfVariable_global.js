@@ -15,6 +15,7 @@ var x = 'global'; // 전역 변수 x에 값 할당
 
 function foo() {           
     // 지역 변수 x 생성시점     ///// 지역변수 x의 생명주기
+    // 변수선언문이 호이스팅 되어 var x = undefined가 암묵적으로 실행됨
     var x = 'local'; // 지역 변수 x에 값 할당
     console.log(x);
     return x;              ///// 지역변수 x의 생명주기
