@@ -13,3 +13,5 @@ function solution(my_string, n) {
 
     return answer;
 }
+
+console.log(solution('jqjkd',2));
