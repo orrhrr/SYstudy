@@ -74,10 +74,14 @@ function factorialWhile(n) {
 console.log(factorialWhile(5));
 
 
-// 반복문을 재귀함수로
+// 반복문을 재귀함수로 (삼항연산자)
 
 function factorial2(n) {
     return (n <= 1 ?  1 : n * factorial2(n -1));
 }
 
+// 화살표함수
+const factorial = (n) => n <= 1 ? 1 : n * factorial2(n -1)
+
 console.log(factorial2(5));
+

@@ -27,7 +27,7 @@ function solution(s) {
            arr.pop(); // arr의 마지막값을 삭제
        } else { // 아니면
            arr.push(s[i]); // arr에 s[i]값을 추가 -> 이 값이 arr 배열의 마지막 값(arr[arr.length -1])이 된다.
-       }
+       } // 삭제하고 남은 값과 다음 값을 비교할 수 있게 됨
     }
 
     return arr.length === 0 ? 1 : 0; // arr배열의 길이가 0이면 1, 아니면 0 반환
