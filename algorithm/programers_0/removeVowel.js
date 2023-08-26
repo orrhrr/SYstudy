@@ -17,6 +17,9 @@ function solution(my_string) {
     
     const str = 'aeiou'
     return my_string.split('').filter((el)=>(!str.includes(el))).join('')
+    // 주어진 문자열을 배열로 변환
+    // 필터메소드를 통해 aeiou 문자열중 주어진 문자열을 포함하지 않는, 즉 aeiou와 다른 문자열들을 추출
+    // 추출한 문자열 배열을 다시 문자열로 변환
     
 }
 
