@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins, 'Noto Sans KR', sans-serif;
+  margin: 0;
+}
+
+.header {
+  background-image: url('bg.png');
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header-title h2{
+  margin: 0 40px;
+  padding-top: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: left;
+}
+
+.header-title span {
+  font-weight: 400;
+}
+
+.header-description {
+  width: 720px;
+  margin: 80px auto;
+  padding: 0 0 280px 0;
+}
+
+.header-description span {
+  font-size: 20px;
+  font-weight: 500;
+  color: #8287a4;
+}
+
+.header-description :nth-last-child() {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.header-description h1 {
+  font-size: 56px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 12px auto 14px;
+}
+
+.content {
+  width: 720px;
+  margin: 0 auto;
+}
+
+.title h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #161346;
+  margin: 74px auto 42px;
+}
+
+.content img {
+  width: 100%;
+  border-radius: 24px;
+}
+
+.content-description {
+  margin: 32px auto;
+  font-size: 16px;
+  font-weight: 500;
+  color: #4c497b;
+}
+
+.link-button {
+
+  text-align: center;
+
+}
+
+.link-button a {
+  display: inline-block;
+  text-align: center;
+  padding: 16px 32px;
+  margin: 0 auto 64px;
+  background-color: #413c91;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer {
+  background-color: #161346;
+  text-align: center;
+}
+
+.footer h3 {
+  font-size: 32px;
+  font-weight: 500;
+  color: #ffffff;
+  padding: 40px 0 8px;
+}
+
+.footer span {
+  font-size: 16px;
+  font-weight: 400;
+  color: #8287a4;
+  margin: 8px auto 32px;
+  display: inline-block;
+
+}
+
+.footer .link-button a {
+  border-radius: 9999px;
+}
+
+.footer .copyright {
+  background-color: #120f3f;
+}
+
+.footer .copyright-box{
+  width: 720px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.footer .copyright span {
+  font-size: 16px;
+  font-weight: 400;
+  color: #d9d9d9;
+}
