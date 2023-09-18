@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-item {
+    height: 400px;
+    background-size: cover;
+    text-align: center;
+}
+
+.carousel-item.item1 {
+    background-image: url("../images/guitar.jpg");
+    background-position: left center;
+}
+
+.carousel-item.item2 {
+    background-image: url('../images/makeup.jpg');
+    background-position: center top;
+}
+
+.carousel-item.item3 {
+    background-image: url('../images/cooking.jpg');
+    background-position: center center;
+}
+
+.carousel-item .info {
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.carousel-item .info h2 {
+    font-size: 32px;
+    font-weight: 300;
+}
+
+.carousel-item .info h3 {
+    font-size: 22px;
+    font-weight: 300;
+    margin: 18px 0 48px;
+}
+
+.carousel-item .info a {
+    font-size: 16px;
+    font-weight: 300;
+    text-decoration: none;
+    color: white;
+    background-color: #5900e7;
+    padding: 10px 30px;
+
+}
+
+
+/*helper div태그를 넣는 이유는 info div태그 내 텍스트의 base line을 helper div태그의 끝에 맞추기 위해서이다. 9/18멘토링 노션 참고*/
+
+.carousel-item .helper {
+    background-color: #5900e7;
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.alert {
+    margin: 50px auto 16px;
+}
+
+
+.container {
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+.container .info {
+    padding: 10px;
+}
+
+.container .info h4{
+    font-size: 18px;
+    color: #4a4a4a;
+    white-space: nowrap;
+}
+
+.container .name {
+    font-size: 13px;
+    color: #4a4a4a;
+}
+
+.container .info .name{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.container .course {
+    display: block;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    padding: 0 15px 0 15px;
+    margin: 16px auto 20px;
+}
+
+
+.course .info .lecturer img,
+.course .info .lecturer .name{
+    vertical-align: middle;
+}
