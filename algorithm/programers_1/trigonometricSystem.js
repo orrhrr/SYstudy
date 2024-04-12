@@ -9,7 +9,7 @@ function solution(n) {
   let reverse = three.split("");
   reverse = reverse.reverse();
   reverse = reverse.join("");
-  answer = Number(parseInt(reverse, 3).toString(10));
+  answer = parseInt(reverse, 3);
 
   return answer;
 }
