@@ -27,7 +27,7 @@ function solution(s, n) {
       }
     }
   }
-
+  ``;
   return answer;
 }
 
@@ -47,6 +47,52 @@ function solution2(s, n) {
     var index = textArr.indexOf(text) + n;
     if (index >= textArr.length) index -= textArr.length;
     answer += textArr[index];
+  }
+  return answer;
+}
+
+function solution(s, n) {
+  var answer = "";
+  for (let i = 0; i < s.length; i++) {
+    let answerItem = "";
+    if (s[i] >= "A" && s[i] <= "Z") {
+      answerItem = String.fromCharCode(
+        ((Number(s[i].codePointAt()) + n - "A".codePointAt()) % 26) +
+          "A".codePointAt()
+      );
+    } else if (s[i] >= "a" && s[i] <= "z") {
+      answerItem = String.fromCharCode(
+        ((Number(s[i].codePointAt()) + n - "a".codePointAt()) % 26) +
+          "a".codePointAt()
+      );
+    } else {
+      answerItem = " ";
+    }
+    // console.log(s[i] >= 'A');
+    // console.log( (Number(s[i].codePointAt()) + n) - 'A'.codePointAt() );
+    // console.log( ((Number(s[i].codePointAt()) + n) - 'A'.codePointAt()) % 26 );
+    // console.log( ((Number(s[i].codePointAt()) + n) - 'A'.codePointAt()) % 26 + 'A'.codePointAt());
+    answer += answerItem;
+  }
+  return answer;
+}
+
+function solution(s, n) {
+  var answer = "";
+  for (let i = 0; i < s.length; i++) {
+    let answerItem = "";
+    if (s[i] >= "A" && s[i] <= "Z") {
+      answerItem = String.fromCharCode(
+        ((s[i].codePointAt() + n - "A".codePointAt()) % 26) + "A".codePointAt()
+      );
+    } else if (s[i] >= "a" && s[i] <= "z") {
+      answerItem = String.fromCharCode(
+        ((s[i].codePointAt() + n - "a".codePointAt()) % 26) + "a".codePointAt()
+      );
+    } else {
+      answerItem = " ";
+    }
+    answer += answerItem;
   }
   return answer;
 }
